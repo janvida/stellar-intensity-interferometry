@@ -1,0 +1,45 @@
+PILOT FILE FOR rndmsiistat.c
+
+
+This section is for turning loops on and off in the code. No more than one loop should be turned on at a time. (0=OFF/1=ON)
+
+* EXNNF		0	      Loop on excess noise
+* BSLNF		1	      Loop on baseline. (Generate g^2 as a function 
+  			      of baseline)
+
+
+
+Parameters of the measurement:
+* TSTEP		1.0           To specify the stray light during 
+  			      observations (ns)
+* INTTM		1.0e5	      Integration time of measurements (ns)
+* PDURT		200.0	      Duration of entire pulse (ns)
+* PDURM		1.0	      Duration of main pulse without AC coupling (ns)
+* PAMPL		1.0	      Pulse amplitude
+* BGLIT		0.0	      Stray background light. Factor which 
+  			      multiplies SFLUX
+* EXNOS		0.0	      Excess noise (Set in range [0.0,1.0])
+
+
+
+Parameters of the source:
+* CTIME		0.1	      Coherence time of star light. Note: Do not set 
+  			      this to a value which is comparable to TSTEP 
+			      or PDURM  (ns)
+* FREQN		7.5	      Mean frequency of light emitted by the 
+  			      star (x1.0e14)
+* SFLUX		0.1	      Flux of star in phot/m^2/s (x1.0e9)
+* SRADI		5.0	      Angular radius of star (nano radians)
+
+
+
+Parameters of the telescopes:
+* TERAD		0.0	      Radius of telescope (m)
+* STEPS		10.0	      The number of steps taken when integrating 
+  			      over the telescope radius
+* MAXBL		100.0	      Maximum baseline separation between telescopes (m)
+* BLSTP		10.0	      Step size for measuring over baseline (m)
+
+
+
+ 
